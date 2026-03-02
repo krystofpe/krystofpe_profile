@@ -42,6 +42,11 @@ body {
     text-decoration: underline;
 }
 
+.header span a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 /* Subtext descriptions */
 .subtext {
     font-size: 20px;
@@ -56,7 +61,7 @@ body {
     /* Default width */
     width: var(--code-snippet-width);
     max-width: 100%;
-    overflow: hidden;
+    overflow: auto;
     padding: 0px;
     background-color: #2d2d2d;
     /* Updated background color */
@@ -90,13 +95,15 @@ body {
 pre {
     white-space: pre-wrap;
     word-wrap: break-word;
+    margin: 0;
 }
 
 /* Optional: Customize the code text appearance */
 pre code {
     font-family: Consolas, Monaco, 'Courier New', monospace;
-    font-size: 14px;
+    font-size: clamp(12px, 3vw, 15px);
     color: #ffffff;
+    display: block;
 }
 
 /* Responsive adjustments */
@@ -132,6 +139,6 @@ pre code {
     }
 
     .code-snippet {
-        font-size: 13px;
+        font-size: 12px;
     }
 }
