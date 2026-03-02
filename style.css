@@ -47,6 +47,13 @@ body {
     text-decoration: inherit;
 }
 
+.header span a:visited,
+.header span a:hover,
+.header span a:focus {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 /* Subtext descriptions */
 .subtext {
     font-size: 20px;
