@@ -11,26 +11,28 @@ body {
 /* Container for left and right sections */
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 30px;
+    gap: 40px;
+    padding: clamp(20px, 5vw, 60px);
     max-width: 1200px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* Left section (header, text, and code snippet) */
 .left-section {
     flex: 2;
-    /* Two-thirds of the container */
-    max-width: 66.66%;
-    /* Ensure it doesn't exceed two-thirds */
+    min-width: 280px;
+    max-width: 700px;
     padding-right: 20px;
 }
 
 /* Header styling */
 .header {
-    font-size: 48px;
-    font-weight: semi-bold;
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 600;
     margin-bottom: 20px;
     text-align: left;
     color: #ffffff;
@@ -71,9 +73,7 @@ body {
 /* Right section (phone mockup) */
 .right-section {
     flex: 1;
-    /* One-third of the container */
-    max-width: 33.33%;
-    /* Ensure it doesn't exceed one-third */
+    min-width: 240px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
@@ -81,7 +81,8 @@ body {
 
 /* Phone image styling */
 .phone {
-    max-width: 400px;
+    width: 100%;
+    max-width: 360px;
     height: auto;
 }
 
@@ -96,4 +97,41 @@ pre code {
     font-family: Consolas, Monaco, 'Courier New', monospace;
     font-size: 14px;
     color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .left-section,
+    .right-section {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .header,
+    .subtext {
+        text-align: center;
+    }
+
+    .right-section {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .subtext {
+        font-size: 18px;
+    }
+
+    .code-snippet {
+        font-size: 13px;
+    }
 }
