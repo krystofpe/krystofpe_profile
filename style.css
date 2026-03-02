@@ -68,11 +68,12 @@ body {
     /* Default width */
     width: var(--code-snippet-width);
     max-width: 100%;
-    overflow: auto;
-    padding: 0px;
-    background-color: #2d2d2d;
-    /* Updated background color */
-    border-radius: 5px;
+    overflow: visible;
+    padding: 0;
+    background: #1c1c22;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
@@ -99,18 +100,29 @@ body {
 }
 
 /* Wrap code inside the pre element */
-pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
+.code-snippet pre,
+.code-snippet pre[class*="language-"] {
+    white-space: pre-wrap !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+    overflow-x: hidden;
     margin: 0;
+    padding: 20px;
+    background: transparent;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 /* Optional: Customize the code text appearance */
-pre code {
+.code-snippet pre code,
+.code-snippet pre code[class*="language-"] {
     font-family: Consolas, Monaco, 'Courier New', monospace;
     font-size: clamp(12px, 3vw, 15px);
     color: #ffffff;
     display: block;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap !important;
 }
 
 /* Responsive adjustments */
@@ -147,5 +159,11 @@ pre code {
 
     .code-snippet {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .code-snippet {
+        font-size: 11px;
     }
 }
