@@ -62,6 +62,22 @@ body {
     text-align: left;
 }
 
+.subtext span {
+    text-decoration: underline;
+}
+
+.subtext span a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.subtext span a:visited,
+.subtext span a:hover,
+.subtext span a:focus {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 /* Code snippet styling */
 .code-snippet {
     --code-snippet-width: 100%;
