@@ -68,15 +68,15 @@ body {
 }
 
 .subtext span a {
-    color: #ffffff;
-    text-decoration: inherit;
+    color: #ffffff !important;
+    text-decoration: underline !important;
 }
 
 .subtext span a:visited,
 .subtext span a:hover,
 .subtext span a:focus {
-    color: #ffffff;
-    text-decoration: inherit;
+    color: #ffffff !important;
+    text-decoration: underline !important;
 }
 
 /* Code snippet styling */
