@@ -99,6 +99,31 @@ body {
     height: auto;
 }
 
+/* Blog link styling */
+.blog-link {
+    margin: 30px 0 20px 0;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, rgba(100, 150, 255, 0.1) 0%, rgba(100, 200, 255, 0.1) 100%);
+    border-left: 3px solid #64b6ff;
+    border-radius: 6px;
+}
+
+.blog-link a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #64b6ff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.blog-link a:hover,
+.blog-link a:focus {
+    color: #a0d8ff;
+    transform: translateX(5px);
+    text-decoration: underline;
+}
+
 /* Wrap code inside the pre element */
 .code-snippet pre,
 .code-snippet pre[class*="language-"] {
